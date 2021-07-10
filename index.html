@@ -22,8 +22,11 @@
         style="height: 495px"
       >
         <h1 class="text-white text-4xl font-bold text-center">COUNTER</h1>
-        <div class="text-center mx-auto mt-80">
-          <p id="paragraph"></p>
+        <p
+          id="paragraph"
+          class="text-green-700 w-60 mx-auto text-center mt-28 text-9xl"
+        ></p>
+        <div class="text-center mx-auto mt-20">
           <button
             id="lowerBtn"
             class="bg-blue-900 text-white px-6 py-2 rounded-md shadow-md"
@@ -40,6 +43,16 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      let btnLow = document.getElementById("lowerBtn");
+      let btnAdd = document.getElementById("addBtn");
+      let para = document.getElementById("paragraph");
+
+      btnAdd.addEventListener("click", function () {
+        for (let i = 0; i < 51; i++) {
+          para.innerHTML = i;
+        }
+      });
+    </script>
   </body>
 </html>
