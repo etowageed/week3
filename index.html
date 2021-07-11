@@ -47,12 +47,20 @@
       let btnLow = document.getElementById("lowerBtn");
       let btnAdd = document.getElementById("addBtn");
       let para = document.getElementById("paragraph");
+      let count = 0;
 
       btnAdd.addEventListener("click", function () {
-        for (let i = 0; i < 51; i++) {
-          para.innerHTML = i;
+        if (count < 50) {
+          para.innerHTML = ++count;
+        }
+      });
+
+      btnLow.addEventListener("click", function () {
+        if (count > 0) {
+          para.innerHTML = --count;
         }
       });
     </script>
   </body>
 </html>
+s
